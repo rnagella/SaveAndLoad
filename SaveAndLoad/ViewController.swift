@@ -55,6 +55,9 @@ class ViewController: UIViewController {
             imageView.image = loadedImage
         }
         
+        // text loading and save data
+        
+        saveText("Save Me!", path: fileInDocumentDirecory("help.txt"))
     }
     
     func saveImage(image: UIImage, path: String) -> Bool {
@@ -75,6 +78,23 @@ class ViewController: UIViewController {
         
         return image
     }
+    
+    // save text
+    
+    func saveText(text: String, path: String) -> Bool {
+        
+        var error: NSError? = nil
+        let status = text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: &error)
+        if !status {
+            println("Error saving file at path: \(path) with error: \(error?.localizedDescription)")
+        }
+        
+        println("path to save text: \(path)")
+        
+        return status
+    }
+    
+    // load text
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
