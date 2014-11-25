@@ -14,6 +14,7 @@
 		0C5882481A24270A00B12221 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5882461A24270A00B12221 /* LaunchScreen.xib */; };
 		0C5882541A24270A00B12221 /* SaveAndLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5882531A24270A00B12221 /* SaveAndLoadTests.swift */; };
 		0C58825E1A2427E200B12221 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 0C58825D1A2427E200B12221 /* ReadMe */; };
+		0C5882601A242EB700B12221 /* imageoftheday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C58825F1A242EB700B12221 /* imageoftheday.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0C5882521A24270A00B12221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5882531A24270A00B12221 /* SaveAndLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAndLoadTests.swift; sourceTree = "<group>"; };
 		0C58825D1A2427E200B12221 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		0C58825F1A242EB700B12221 /* imageoftheday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imageoftheday.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		0C58823A1A24270A00B12221 /* SaveAndLoad */ = {
 			isa = PBXGroup;
 			children = (
+				0C58825F1A242EB700B12221 /* imageoftheday.jpg */,
 				0C58823D1A24270A00B12221 /* AppDelegate.swift */,
 				0C58823F1A24270A00B12221 /* ViewController.swift */,
 				0C5882411A24270A00B12221 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C58825E1A2427E200B12221 /* ReadMe in Resources */,
+				0C5882601A242EB700B12221 /* imageoftheday.jpg in Resources */,
 				0C5882431A24270A00B12221 /* Main.storyboard in Resources */,
 				0C5882481A24270A00B12221 /* LaunchScreen.xib in Resources */,
 				0C5882451A24270A00B12221 /* Images.xcassets in Resources */,

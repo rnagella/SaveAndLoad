@@ -36,6 +36,25 @@ class ViewController: UIViewController {
         
         let imagePath = fileInDocumentDirecory("Photo.jpeg")
         println("Photo Path: \(imagePath)")
+        
+        // Load image from resource Bundle (Read only)
+        var image = UIImage(named: "imageoftheday.jpg")
+        
+        if image != nil {
+        // save it to document folder
+            println(image)
+            let result = saveImage(image!, path: imagePath)
+            println("SaveImage: \(result)")
+        }
+        
+    }
+    
+    func saveImage(image: UIImage, path: String) -> Bool {
+        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)
+        // png image 
+        let result = jpgImageData.writeToFile(path, atomically: true)
+        
+        return result
     }
 
     override func didReceiveMemoryWarning() {
