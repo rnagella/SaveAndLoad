@@ -1,0 +1,6 @@
+//  Created by Ranjith Nagella on 11/24/14.
+//  Copyright (c) 2014 Ranjith Nagella. All rights reserved.
+
+Save and Load data using swift file system.
+- Step1: Retrive document folder on Simulator/iPhone as a string.
+
