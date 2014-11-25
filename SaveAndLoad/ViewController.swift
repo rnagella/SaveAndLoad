@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // Users/rknage/Library/Developer/CoreSimulator/Devices/0BD56009-288C-4E32-8F39-820ABE512DF6/data/Containers/Data/Application/0DDC3504-78C2-4EAC-AEE0-7413CA1B9238/Documents
     
     
+    @IBOutlet weak var imageView: UIImageView!
     func documentsDirectory() -> String{
         let documentFolderPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
         
@@ -47,6 +48,13 @@ class ViewController: UIViewController {
             println("SaveImage: \(result)")
         }
         
+        var loadedImage = loadImageFromPath(imagePath)
+        
+        if loadedImage != nil {
+            println("Image loaded:\(loadedImage)")
+            imageView.image = loadedImage
+        }
+        
     }
     
     func saveImage(image: UIImage, path: String) -> Bool {
@@ -55,6 +63,17 @@ class ViewController: UIViewController {
         let result = jpgImageData.writeToFile(path, atomically: true)
         
         return result
+    }
+    
+    // UIImage is optional becuase it might not foind.
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        
+        if image == nil {
+            println("Missing path at path: \(path)")
+        }
+        
+        return image
     }
 
     override func didReceiveMemoryWarning() {
